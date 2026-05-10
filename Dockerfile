@@ -17,7 +17,7 @@ COPY requirements.txt .
 RUN pip install mysqlclient
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code
+# Copy the rest of the application code from github to /app in Server
 COPY . .
 
 # Specify the command to run your application
