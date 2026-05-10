@@ -1,4 +1,4 @@
-**Two-Tier Flask Application with Jenkins CI/CD Pipeline**
+# Two-Tier Flask Application with Jenkins CI/CD Pipeline
 
 A robust, containerized two-tier web application featuring a Flask frontend and a MySQL database. This project demonstrates a complete DevOps lifecycle, from local development to automated deployment on AWS using Jenkins and Docker Compose.
 
@@ -37,7 +37,6 @@ Git: To allow Jenkins to clone the repository.
 1. Server Preparation
 On your Amazon Linux EC2 instance, install the core components:
 
-Bash
 # Install Java 21 and Jenkins
 sudo dnf install java-21-amazon-corretto jenkins -y
 
@@ -51,12 +50,12 @@ sudo systemctl restart jenkins
 2. Memory Optimization (Crucial for t2.micro)
 To prevent the server from freezing during Docker builds, it is recommended to set up a 2GB Swap file:
 
-Bash
 sudo fallocate -l 2G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
 🏗 CI/CD Pipeline Configuration
 Unlock Jenkins: Retrieve the initial password using sudo cat /var/lib/jenkins/secrets/initialAdminPassword.
 
